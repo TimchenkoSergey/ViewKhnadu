@@ -9,7 +9,7 @@
             dots: true,
 		    responsive: {
 		    	0   : { items: 1 },
-		        500 : { items: 2 },
+		        500 : { items: 2 }, 
 		        750 : { items: 3 },
 		        1100: { items: 4 }
 		    }
