@@ -20,4 +20,4 @@
     $(function() {
         $(".swipebox").swipebox();
     });
-})();
+})();  
