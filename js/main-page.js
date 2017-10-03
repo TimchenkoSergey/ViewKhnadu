@@ -42,4 +42,25 @@
 			new WOW().init();
 		}
     });
+
+    $(function(){
+    	var elements = $('.statistics__number');
+    	var animsElements = [];
+
+    	$.each(elements, function () {
+			var number = $(this).text();
+            animsElements.push(new CountUp(this, 0, +number, 0, 3));
+        });
+
+    	var anim = false;
+        $(window).scroll(function (){
+            var st = $(this).scrollTop();
+
+            if (!anim && st > 2600) {
+                animsElements.forEach(function (item) {
+                    item.start();
+                })
+			}
+        });
+    });
 })();
