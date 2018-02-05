@@ -2,12 +2,12 @@
 	"use strict";
 
 	//init main slider
-	$(function () {
+	/*$(function () {
 		$('.carousel').carousel({
 			interval: 6000,
 			pause: null
 		});
-	});
+	});*/
 
 	//init owl carousel for main page block graduates
 	$(function () {
@@ -15,6 +15,7 @@
 			items : 1,
 			dots  : false,
 			nav   : true,
+			autoplay : false,
 			navText : [
 				"<i class='graduates__arrow--prev fa fa-chevron-left'  aria-hidden='true'></i>",
 				"<i class='graduates__arrow--next fa fa-chevron-right' aria-hidden='true'></i>"
@@ -44,23 +45,23 @@
     });
 
     $(function(){
-    	var elements = $('.statistics__number');
-    	var animsElements = [];
+        var elements = $('.statistics__number');
+        var animsElements = [];
 
-    	$.each(elements, function () {
-			var number = $(this).text();
-            animsElements.push(new CountUp(this, 0, +number, 0, 3));
-        });
+        $.each(elements, function () {
+		var number = $(this).text();
+             animsElements.push(new CountUp(this, 0, +number, 0, 3));
+         });
 
-    	var anim = false;
-        $(window).scroll(function (){
-            var st = $(this).scrollTop();
+     	var anim = false;
+         $(window).scroll(function (){
+             var st = $(this).scrollTop();
 
-            if (!anim && st > 2600) {
-                animsElements.forEach(function (item) {
-                    item.start();
-                })
-			}
-        });
-    });
+             if (!anim && st > 2600) {
+                 animsElements.forEach(function (item) {
+                     item.start();
+                 })
+ 			}
+         });
+     });
 })();

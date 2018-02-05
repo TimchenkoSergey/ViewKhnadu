@@ -16,8 +16,7 @@
         });
     });
 
-    //init swipe box for gallery
-    $(function() {
-        $(".swipebox").swipebox();
+    $(function () {
+        functions.getMore('science');
     });
-})();  
+})();
